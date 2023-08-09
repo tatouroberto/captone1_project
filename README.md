@@ -26,7 +26,7 @@
 # 📖 Computer Science Pedagogic Seminer <a name="about-project"></a>
 
 
-[**Portfolio Microverse project**](https://tatouroberto.github.io/) is a website for annual computer serminars.
+[**Computer Science Pedagogic Seminer**](https://tatouroberto.github.io/computer_seminer.github.io/) is a website for annual computer serminars.
 
 
 ## 🛠 Built With <a name="built-with"></a>
