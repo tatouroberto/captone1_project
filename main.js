@@ -1,13 +1,12 @@
 const MenuSection = document.getElementById('Menu');
 
-/* eslint-disable no-unused-vars */
 const showMenu = () => {
   MenuSection.style.display = 'block';
 };
 const hideMenu = () => {
   MenuSection.style.display = 'none';
 };
-/* eslint-enable no-unused-vars */
+
 const speakerContainer = document.querySelector('.home-page');
 
 speakerContainer.innerHTML += `
@@ -93,3 +92,6 @@ speakerContainer.innerHTML += `
 </div>
 
 </div>`;
+const contactLink = document.getElementsByClassName('contactLink');
+contactLink.addEventListener(onclick, hideMenu);
+contactLink.addEventListener(onclick, showMenu);
