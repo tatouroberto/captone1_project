@@ -395,7 +395,7 @@ body {
    
   }
 
-  .about-second -container {
+  .about-second-container {
     display: flex;
     width: 99%;
     height: 433px;
@@ -453,6 +453,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 35px;
+    width: 60%;
+    padding: 8% 20%;
   }
 
   .about-page2-1 {
@@ -645,7 +647,9 @@ body {
   .see-program,
   .featured-desk,
   .end,
-  .about-page4 {
+  .about-page4,
+  .about-theme-desk,
+  .speaker-img-desk {
     display: none;
   }
 
@@ -656,12 +660,18 @@ body {
   .logo,
   .taskbar,
   .button1,
-  .see-more {
+  .see-more,
+  .about-theme,
+  .page4-hide,
+  .end-hide,
+  .speaker-img-mobile {
     display: none;
   }
 
   .desk-logo,
-  .see-program {
+  .see-program,
+  .about-theme-desk,
+  .speaker-img-desk {
     display: block;
   }
 
@@ -863,6 +873,42 @@ text-decoration-line: underline;
 .end-p {
 width: 400px;
 }
+
+.about-first-page {
+  width: 50%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.page3-images {
+  flex-direction: row;
+}
+
+.about-page3 {
+padding-top: 33PX;
+}
+
+.end-about2 {
+  display: block;
+  background-color: #2E2E2E;
+}
+
+.end-ppp {
+  color: #FFFFFF;
+  
+  font-family: Lato;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 13.078px; /* 130.779% */
+  letter-spacing: -0.1px;
+  width: 400px;
+}
+
+.featured-text {
+  width: 160px;
+}
+
 
 
 }
