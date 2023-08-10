@@ -7,91 +7,88 @@ const hideMenu = () => {
   MenuSection.style.display = 'none';
 };
 
-const speakerContainer = document.querySelector('.home-page');
+const speakers = document.querySelector('.featured__speakers-grid');
+const data = [
+  {
+    img: 'Assets/speaker_01 1.svg',
+    title: 'David Johnson',
+    subTitle: 'Avionics Systems Engineer',
+    info: 'Highly skilled in flight electronics and problem-solving, David ensures the smooth operation and safety of modern aircraft..',
+    classes: 'speakers__grid-item',
+  },
+  {
+    img: 'Assets/speaker_01 22.png',
+    title: 'Laura Martinez',
+    subTitle: 'Commercial Pilot',
+    info: "Experienced and skilled, Laura's exceptional navigation abilities have earned her respect among peers in the aviation community..",
+    classes: 'speakers__grid-item',
+  },
+  {
+    img: 'Assets/speaker_01 1.png',
+    title: 'David Johnson',
+    subTitle: 'Avionics Systems Engineer',
+    info: 'Highly skilled in flight electronics and problem-solving, David ensures the smooth operation and safety of modern aircraft..',
+    classes: 'hidden-mobile',
+  },
+  {
+    img: 'Assets/n1.png',
+    title: 'Andrea García',
+    subTitle: 'Aeronautical Engineererkman Professor of Entrepreneurial Legal Studies at Harvard Law School',
+    info: 'Passionate about aircraft design and innovation, Andrea contributes significantly to cutting-edge projects in the aviation industry..',
+    classes: 'hidden-mobile',
+  },
+  {
+    img: 'Assets/n2.png',
+    title: ' Michael Smith',
+    subTitle: 'Air Traffic Controller',
+    info: 'Seasoned and efficient, Michael manages airspace and coordinates flights with precision..',
+    classes: 'hidden-mobile',
+  },
+  {
+    img: 'Assets/n3.png',
+    title: 'Laura Martinez',
+    subTitle: 'Commercial Pilot',
+    info: "Experienced and skilled, Laura's exceptional navigation abilities have earned her respect among peers in the aviation community..",
+    classes: 'hidden-mobile',
+  },
+  {
+    img: 'Assets/n4.png',
+    title: 'Sofia Lopez',
+    subTitle: 'Aeronautical Maintenance Technician.',
+    info: ' Meticulous and committed to aviation safety, Sofia is an indispensable member of her maintenance team..',
+    classes: 'hidden-mobile',
+  },
+  {
+    img: 'Assets/n5.png',
+    title: 'Robert Brown',
+    subTitle: 'Aviation Safety Researcher',
+    info: "Dedicated to enhancing safety protocols, Robert's work contributes to making air travel safer for passengers and crew..",
+    classes: 'hidden-mobile',
+  },
 
-speakerContainer.innerHTML += `
-<div class="featured-speakers">
-<div class="featured">
-    <img src="img/speaker_01 1.png" alt="" class="speaker-img speaker-img-mobile">
-    <img src="img/speaker_01 1 (7).png" alt="" class="speaker-img speaker-img-desk ">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">Yochai Benkler</p></div>
-                <div><p class="third-text2">Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">Benkler studies commons-based peer production, and published his seminal book, The Wealth of Networks in 2006</p>
-    </div>
-   
-</div>
-<div class="featured">
-    <img src="img/speaker_01 1 (2).png" alt="" class="speaker-img speaker-img-mobile">
-    <img src="img/speaker_01 1 (8).png" alt="" class="speaker-img speaker-img-desk ">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">SohYeong Noh</p></div>
-                <div><p class="third-text2">Director of Art Centre Nabi and a board member of CC Korea</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.</p>
-    </div>
-   
-</div>
+];
 
-<div class="featured featured-desk">
-    <img src="img/speaker_01 1 (3).png" alt="" class="speaker-img">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">SohYeong Noh</p></div>
-                <div><p class="third-text2">Director of Art Centre Nabi and a board member of CC Korea</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.</p>
-    </div>
-   
+function componenDynamic(data) {
+  return data.map((featured) => {
+    const {
+      img, title, subTitle, info, classes,
+    } = featured;
+    return `
+    <div class="${classes}">  
+    <div>
+    <img src="${img}" alt="here goes a picture">
 </div>
+<div class="speaker__description">
+    <h4 class="speaker__description-h4">${title}</h4>
+    <h5 class="speaker__description-h5">${subTitle}</h5>
+    <hr class="speakers__hr">
+    <p class="speaker__description-p">${info}</p>
+</div>
+</div>
+    `;
+  }).join('');
+}
 
-</div>
-<div class="featured-speakers featured-desk">
-<div class="featured">
-    <img src="img/speaker_01 1 (4).png" alt="" class="speaker-img">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">Yochai Benkler</p></div>
-                <div><p class="third-text2">Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">Benkler studies commons-based peer production, and published his seminal book, The Wealth of Networks in 2006</p>
-    </div>
-   
-</div>
-<div class="featured featured-desk">
-    <img src="img/speaker_01 1 (5).png" alt="" class="speaker-img">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">SohYeong Noh</p></div>
-                <div><p class="third-text2">Director of Art Centre Nabi and a board member of CC Korea</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.</p>
-    </div>
-   
-</div>
-
-<div class="featured featured-desk">
-    <img src="img/speaker_01 1 (6).png" alt="" class="speaker-img">
-    <div class="featured-text">
-            <div class="featured-part1">
-                <div> <p class="third-text1">SohYeong Noh</p></div>
-                <div><p class="third-text2">Director of Art Centre Nabi and a board member of CC Korea</p></div>
-                <img src="img/title_underline (1).png" alt="">
-            </div>
-            <p class="featured-part2">As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.</p>
-    </div>
-   
-</div>
-
-</div>`;
-const contactLink = document.getElementsByClassName('contactLink');
+speakers.innerHTML = componenDynamic(data); const contactLink = document.getElementsByClassName('contactLink');
 contactLink.addEventListener(onclick, hideMenu);
 contactLink.addEventListener(onclick, showMenu);
